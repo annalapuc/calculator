@@ -1,0 +1,84 @@
+#include <iostream>
+#include <math.h>
+#include <windows.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+using namespace std;
+
+float a,b;
+float suma, roznica, iloczyn, iloraz, pierwiastek, potega;
+int wybor;
+
+int main()
+{
+   cout << "KALKULATOR " << endl;
+
+   for (;;)
+   {
+        cout<<"\n";
+        cout<<"*************"<<endl;
+        cout<<"MENU GLOWNE"<<endl;
+        cout<<"1. Dodawanie"<<endl;
+        cout<<"2. Odejmowanie"<<endl;
+        cout<<"3. Mnozenie"<<endl;
+        cout<<"4. Dzielenie"<<endl;
+        cout<<"5. Pierwiastek"<<endl;
+        cout<<"6. Potega"<<endl;
+        cout<<"7. Wyjscie"<<endl;
+        Sleep(1000);
+        cout<<"Wybierz dzialanie na liczbach"<<endl;
+        cin>>wybor;
+
+    if (wybor!=7)
+    {
+        cout<<"Podaj pierwsza liczbe: ";
+        cin>>a;
+        cout<<"Podaj druga liczbe: ";
+        cin>>b;
+    }
+
+
+    switch(wybor)
+    {
+    case 1:
+        suma=a+b;
+        cout<<"Suma= "<<suma;
+        break;
+    case 2:
+        roznica=a-b;
+        cout<<"Roznica= "<<roznica;
+        break;
+    case 3:
+        iloczyn=a*b;
+        cout<<"Iloczyn= "<<iloczyn;
+        break;
+    case 4:
+        iloraz=a/b;
+            if (b==0)
+                {
+            cout<<"nie dzielimy przez 0 "<<endl;
+                }
+            else
+                {
+            cout<<"Iloraz= "<<iloraz;
+                }
+        break;
+    case 5:
+        pierwiastek=sqrt(a);
+        cout<<"Pierwistek= "<<pierwiastek;
+        break;
+    case 6:
+        potega=pow(a,b);
+        cout<<"Potegowa= "<<potega;
+        break;
+    case 7:
+        exit(0);
+        break;
+    default:
+        cout<< "Nie ma takiej opcji w menu"<<endl;
+    }}
+   getchar(), getchar();
+
+    return 0;
+}
